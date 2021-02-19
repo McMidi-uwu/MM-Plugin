@@ -28,7 +28,7 @@ public enum Pitch {
     Fs3(2F);
 
     /**
-     * Pitch represented as a float from 0 to 1.
+     * Pitch represented as a float from 0.5 to 2.
      */
     private final float pitchFloat;
 
