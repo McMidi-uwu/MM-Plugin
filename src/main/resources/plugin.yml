@@ -1,0 +1,7 @@
+name: McMidi
+version: @version@
+main: xyz.tehbrian.mcmidi.McMidi
+api-version: 1.16
+authors: [ TehBrian ]
+description: Play MIDI from your computer.
+website: https://tehbrian.xyz
