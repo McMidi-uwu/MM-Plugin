@@ -7,8 +7,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import xyz.tehbrian.mcmidi.McMidi;
 
-import java.util.logging.Logger;
-
 /**
  * Guice module which provides bindings for instances originating from the plugin's main class.
  */
@@ -36,16 +34,6 @@ public final class PluginModule extends AbstractModule {
     @Provides
     public FileConfiguration provideFileConfiguration() {
         return this.mcMidi.getConfig();
-    }
-
-    /**
-     * Provides the plugin's {@link Logger}.
-     *
-     * @return the {@link Logger}
-     */
-    @Provides
-    public Logger provideLogger() {
-        return this.mcMidi.getLogger();
     }
 
     @Override
