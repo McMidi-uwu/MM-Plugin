@@ -23,6 +23,8 @@ public final class McMidi extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+
         Injector injector = Guice.createInjector(
                 new PluginModule(this),
                 new ConfigModule(),
