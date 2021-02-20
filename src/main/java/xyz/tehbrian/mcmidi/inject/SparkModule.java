@@ -23,5 +23,4 @@ public class SparkModule extends AbstractModule {
             final @NonNull NotePlayer notePlayer) {
         return new SparkController(config, notePlayer);
     }
-
 }
