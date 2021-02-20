@@ -27,14 +27,12 @@ public class NotePlayer {
         Location location = player.getLocation();
         player.getWorld().spawnParticle(Particle.NOTE,
                 location.getX(),
-                location.getY(),
+                location.getY() + 2.25,
                 location.getZ(),
-                1,
+                0,
+                note.getPitch().getParticleColor(),
                 0,
                 0,
-                0,
-                // Get a fancy color that corresponds correctly
-                // to what Minecraft does for normal noteblocks.
-                note.getPitch().getNumOfClicks() / 24D);
+                1);
     }
 }

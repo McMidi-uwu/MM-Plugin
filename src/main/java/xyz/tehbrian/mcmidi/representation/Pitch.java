@@ -219,4 +219,15 @@ public enum Pitch {
     public int getNumOfClicks() {
         return this.numOfClicks;
     }
+
+    /**
+     * Gets a double which, if fed into a colored particle as
+     * the dx offset, will correspond to the color emitted
+     * by a noteblock playing the same pitch.
+     *
+     * @return a double representing the hue of the pitch
+     */
+    public double getParticleColor() {
+        return (this.numOfClicks / 24D);
+    }
 }
