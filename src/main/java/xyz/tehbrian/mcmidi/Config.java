@@ -15,10 +15,6 @@ public class Config {
     private static final int PORT_MAX = 65535;
 
     /**
-     * McMidi reference.
-     */
-    private final McMidi mcMidi;
-    /**
      * FileConfiguration reference.
      */
     private final FileConfiguration config;
@@ -39,10 +35,8 @@ public class Config {
      * @param logger the {@link Logger} to yell at when values are absent
      */
     public Config(
-            final @NonNull McMidi mcMidi,
             final @NonNull FileConfiguration config,
             final @NonNull Logger logger) {
-        this.mcMidi = mcMidi;
         this.config = config;
         this.logger = logger;
     }
