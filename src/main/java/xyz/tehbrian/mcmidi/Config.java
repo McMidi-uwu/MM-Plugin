@@ -52,27 +52,20 @@ public class Config {
         this.secureKeystorePassword = this.config.getString("secure.keystore_password");
 
         if (this.port < PORT_MIN || this.port > PORT_MAX) {
-            this.whine("Port must be between 65535.");
+            this.logger.severe("Port must be between 65535. Defaulting to 61672.");
+            this.port = 61672;
         }
 
         if (this.isSecureEnabled) {
             if (this.secureKeystoreFile == null) {
-                this.whine("Keystore file is null.");
+                this.logger.severe("Keystore file is null. Disabling HTTPS/SSL.");
+                this.isSecureEnabled = false;
             }
             if (this.secureKeystorePassword == null) {
-                this.whine("Keystore password is null.");
+                this.logger.severe("Keystore password is null. Disabling HTTPS/SSL.");
+                this.isSecureEnabled = false;
             }
         }
-    }
-
-    /**
-     * Logs a severe message and shuts down the server.
-     *
-     * @param message the message to log
-     */
-    private void whine(final String message) {
-        this.logger.severe(message + " You can change this value in McMidi's config. Shutting down server..");
-        this.mcMidi.getServer().shutdown();
     }
 
     /**
