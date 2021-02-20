@@ -22,6 +22,8 @@ public class ConfigModule extends AbstractModule {
     public Config provideConfig(
             final @NonNull FileConfiguration fileConfiguration,
             final @NonNull Logger logger) {
-        return new Config(mcMidi, fileConfiguration, logger);
+        Config config = new Config(fileConfiguration, logger);
+        config.loadValues();
+        return config;
     }
 }
