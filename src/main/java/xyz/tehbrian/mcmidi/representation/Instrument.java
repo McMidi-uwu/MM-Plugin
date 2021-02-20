@@ -1,7 +1,11 @@
-package xyz.tehbrian.mcmidi;
+package xyz.tehbrian.mcmidi.representation;
 
 import org.bukkit.Sound;
 
+/**
+ * Represents all Minecraft sounds which sound good when
+ * played as an instrument.
+ */
 public enum Instrument {
     BANJO(Sound.BLOCK_NOTE_BLOCK_BANJO),
     BASEDRUM(Sound.BLOCK_NOTE_BLOCK_BASEDRUM),
@@ -27,6 +31,6 @@ public enum Instrument {
     }
 
     public Sound asSound() {
-        return sound;
+        return this.sound;
     }
 }

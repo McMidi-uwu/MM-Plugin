@@ -1,6 +1,9 @@
-package xyz.tehbrian.mcmidi;
+package xyz.tehbrian.mcmidi.representation;
 
-public class Note {
+/**
+ * Represents a note that can be played.
+ */
+public final class Note {
 
     public final Instrument instrument;
     public final Pitch pitch;
@@ -13,14 +16,14 @@ public class Note {
     }
 
     public Instrument getInstrument() {
-        return instrument;
+        return this.instrument;
     }
 
     public Pitch getPitch() {
-        return pitch;
+        return this.pitch;
     }
 
     public float getVelocity() {
-        return velocity;
+        return this.velocity;
     }
 }

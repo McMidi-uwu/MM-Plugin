@@ -1,6 +1,9 @@
-package xyz.tehbrian.mcmidi;
+package xyz.tehbrian.mcmidi.representation;
 
-public class NoteRequest {
+/**
+ * Represents a request for a note to be played by some player.
+ */
+public final class NoteRequest {
 
     public final String playerName;
     public final Note note;
@@ -11,10 +14,10 @@ public class NoteRequest {
     }
 
     public String getPlayerName() {
-        return playerName;
+        return this.playerName;
     }
 
     public Note getNote() {
-        return note;
+        return this.note;
     }
 }
